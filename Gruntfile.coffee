@@ -30,7 +30,7 @@ module.exports = (grunt) ->
             jshint:
                 files: ['js/*.js']
                 tasks: ['jshint']
-        
+
             sass:
                 files: ['css/source/theme.scss']
                 tasks: ['sass']
@@ -40,7 +40,7 @@ module.exports = (grunt) ->
             theme:
                 files:
                     'css/theme.css': 'css/source/theme.scss'
-        
+
         connect:
 
             livereload:
@@ -79,7 +79,8 @@ module.exports = (grunt) ->
                         'slides/**'
                         'bower_components/**'
                         'js/**'
-                        'css/*.css'
+                        'css/*.css',
+                        'img/**'
                     ]
                     dest: 'dist/'
                 },{
@@ -89,7 +90,7 @@ module.exports = (grunt) ->
                     filter: 'isFile'
                 }]
 
-        
+
         buildcontrol:
 
             options:
@@ -101,7 +102,7 @@ module.exports = (grunt) ->
                 options:
                     remote: 'git@github.com:mischah/js-tooling-slides.git'
                     branch: 'gh-pages'
-        
+
 
 
     # Load all grunt tasks.
@@ -151,13 +152,13 @@ module.exports = (grunt) ->
             'copy'
         ]
 
-    
+
     grunt.registerTask 'deploy',
         'Deploy to Github Pages', [
             'dist'
             'buildcontrol'
         ]
-    
+
 
     # Define default task.
     grunt.registerTask 'default', [
