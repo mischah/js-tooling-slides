@@ -1,10 +1,5 @@
 
 # JavaScript Tooling
 
-From the terminal, pop in:
 
-  ```yo reveal:slide "Slide Title"```
-
-Available options:
-
- ```--markdown --attributes --notes```
+Sourcecode of the demos (including an epic readme) available [over here](https://github.com/mischah/js-tooling-demo).
